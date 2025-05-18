@@ -1,95 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pet Care Books Catalog</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #fff;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pet Care Books Catalog</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0;
+    background: #f4f7fa;
+    color: #333;
+  }
+  header {
+    background: url('https://i.ibb.co/qMMXQHNx/file-000000004bb862438392003b1bcb7b46.png') no-repeat center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #222;
+  }
+  .books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+  .book-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    width: 280px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .book-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+  }
+  .book-info {
+    padding: 15px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .book-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  .download-btn {
+    text-align: center;
+    margin-top: auto;
+  }
+  .download-btn a {
+    display: inline-block;
+    background: #2c7be5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .download-btn a:hover {
+    background: #1a5ccc;
+  }
+  footer {
+    text-align: center;
+    padding: 25px 0;
+    color: #777;
+    font-size: 0.9rem;
+  }
+  @media(max-width: 700px) {
+    .books {
+      flex-direction: column;
+      align-items: center;
     }
-    .hero {
-      background-image: url('https://i.ibb.co/qMMXQHNx/file-000000004bb862438392003b1bcb7b46.png');
-      background-size: cover;
-      background-position: center;
-      padding: 80px 20px;
-      color: #fff;
+    .book-card {
+      width: 90%;
+      height: auto;
     }
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    .book-card img {
+      height: auto;
     }
-    .hero p {
-      font-size: 18px;
-      color: #eee;
-      text-shadow: 0 0 3px rgba(0,0,0,0.6);
-    }
-    .catalog {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-      padding: 30px 20px;
-      max-width: 700px;
-      margin: auto;
-    }
-    .book {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 10px;
-      background: #fafafa;
-    }
-    .book img {
-      width: 100%;
-      border-radius: 5px;
-    }
-    .book-title {
-      margin-top: 10px;
-      font-size: 16px;
-      font-weight: bold;
-      color: #222;
-    }
-    .download-btn {
-      display: inline-block;
-      margin: 30px auto 50px auto;
-      padding: 15px 30px;
-      background-color: #00AEEF;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 18px;
-    }
-    footer {
-      margin: 30px 0;
-      font-size: 14px;
-      color: #888;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
-  <div class="hero">
-    <h1>Free Pet Care Books Catalog</h1>
-    <p>Take the best care of your pet with our exclusive collection of guides & tips!</p>
-  </div>
+<header>
+  Pet Care Books Catalog
+</header>
 
-  <div class="catalog">
-    <div class="book">
-      <img src="https://i.ibb.co/4ZjKDWK1/8def6cb00f6afa40c4011407176308b36314f28ed01e48651b3f83d8c9de6bc8.jpg" alt="Book 1" />
-      <div class="book-title">How to Understand Your Cat</div>
+<main>
+  <h1>Explore Our Top Pet Care Books</h1>
+  <div class="books">
+
+    <div class="book-card">
+      <img src="https://i.ibb.co/4ZjKDWK1/8def6cb00f6afa40c4011407176308b36314f28ed01e48651b3f83d8c9de6bc8.jpg" alt="Cat Care Book Cover" />
+      <div class="book-info">
+        <div class="book-title">Ultimate Cat Care Guide</div>
+        <div class="download-btn">
+          <a href="https://locked2.com/cl/i/pod8gl" target="_blank" rel="noopener noreferrer">Download</a>
+        </div>
+      </div>
     </div>
+
+    <div class="book-card">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/51FJjH47ZBL._SX398_BO1,204,203,200_.jpg" alt="Dog Owner's Home Veterinary Handbook" />
+      <div class="book-info">
+        <div class="book-title">Dog Owner's Home Veterinary Handbook</div>
+        <div class="download-btn">
+          <a href="https://locked1.com/cl/i/2ljvwd" target="_blank" rel="noopener noreferrer">Download</a>
+        </div>
+      </div>
+    </div>
+
   </div>
+</main>
 
-  <a class="download-btn" href="https://locked2.com/cl/i/pod8gl" target="_blank" rel="noopener noreferrer">Download the Catalog Free</a>
-
-  <footer>
-    Privacy Policy | Terms of Service | Contact Us
-  </footer>
+<footer>
+  &copy; 2025 Pet Care Books Catalog. All rights reserved.
+</footer>
 
 </body>
 </html>
