@@ -8,7 +8,7 @@
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0; padding: 0;
-    background: #f4f7fa;
+    background: linear-gradient(135deg, #dff3ff, #f6e9ff);
     color: #333;
   }
   header {
@@ -18,52 +18,62 @@
     justify-content: center;
     align-items: center;
     color: white;
-    text-shadow: 0 0 10px rgba(0,0,0,0.7);
-    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+    font-size: 3rem;
     font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
   }
   main {
     max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 15px;
+    margin: 40px auto;
+    padding: 0 20px;
   }
   h1 {
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
     color: #222;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.15);
   }
   .books {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 30px;
     justify-content: center;
   }
   .book-card {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    width: 280px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 290px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.5s ease forwards;
+  }
+  .book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.2);
   }
   .book-card img {
     width: 100%;
-    height: 360px;
+    height: 370px;
     object-fit: cover;
   }
   .book-info {
-    padding: 15px 20px;
+    padding: 18px 20px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   .book-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.05);
   }
   .download-btn {
     text-align: center;
@@ -71,22 +81,27 @@
   }
   .download-btn a {
     display: inline-block;
-    background: #2c7be5;
+    background: linear-gradient(135deg, #ff7eb9, #ff758c);
     color: white;
-    padding: 12px 20px;
+    padding: 13px 22px;
     border-radius: 30px;
     font-weight: 600;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
   }
   .download-btn a:hover {
-    background: #1a5ccc;
+    background: linear-gradient(135deg, #ff4d94, #ff577c);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   }
   footer {
     text-align: center;
-    padding: 25px 0;
+    padding: 30px 0;
     color: #777;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.5);
+    margin-top: 50px;
+    border-top: 1px solid #ddd;
   }
   @media(max-width: 700px) {
     .books {
@@ -94,12 +109,16 @@
       align-items: center;
     }
     .book-card {
-      width: 90%;
-      height: auto;
+      width: 92%;
     }
-    .book-card img {
-      height: auto;
-    }
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  @keyframes fadeInUp {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
   }
 </style>
 </head>
@@ -110,7 +129,7 @@
 </header>
 
 <main>
-  <h1>Explore Our Top Pet Care Books</h1>
+  <h1>Discover Top Pet Care Books</h1>
   <div class="books">
 
     <div class="book-card">
@@ -118,17 +137,17 @@
       <div class="book-info">
         <div class="book-title">Ultimate Cat Care Guide</div>
         <div class="download-btn">
-          <a href="https://locked2.com/cl/i/pod8gl" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://locked2.com/cl/i/pod8gl" target="_blank" rel="noopener noreferrer">Download Now</a>
         </div>
       </div>
     </div>
 
     <div class="book-card">
-      <img src="https://ibb.co/JLcLjP4" alt="Dog Owner's Home Veterinary Handbook" />
+      <img src="https://i.ibb.co/83m3gVp/718-WYr-ZL1-SL-AC-UF1000-1000-QL80-FMwebp.webp" alt="Dog Book Cover" />
       <div class="book-info">
         <div class="book-title">Dog Owner's Home Veterinary Handbook</div>
         <div class="download-btn">
-          <a href="https://locked1.com/cl/i/2ljvwd" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://locked1.com/cl/i/2ljvwd" target="_blank" rel="noopener noreferrer">Download Now</a>
         </div>
       </div>
     </div>
@@ -137,7 +156,7 @@
 </main>
 
 <footer>
-  &copy; 2025 Pet Care Books Catalog. All rights reserved.
+  &copy; 2025 Pet Care Books Catalog. Designed by Abdssamad.
 </footer>
 
 </body>
