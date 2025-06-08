@@ -1,167 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pet Care Books Catalog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Mobile Games to Download</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
     body {
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-      color: #333;
+      background: #121212;
+      color: #eee;
       line-height: 1.6;
     }
     header {
-      padding: 20px;
-      background: #ffffffbb;
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-      color: #333;
-      font-weight: 700;
-    }
-    .hero {
+      background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+      color: #ff6f00;
+      padding: 1.8rem 1rem;
       text-align: center;
-      padding: 60px 20px;
-    }
-    .hero img {
-      max-width: 100%;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .hero h2 {
-      font-size: 42px;
-      margin-top: 25px;
+      font-size: 2rem;
       font-weight: 700;
-      color: #222;
+      letter-spacing: 2px;
+      box-shadow: 0 3px 15px rgba(255, 111, 0, 0.5);
+      text-transform: uppercase;
+      user-select: none;
     }
-    .hero p {
-      font-size: 20px;
-      margin: 15px 0 25px;
-      color: #555;
+    .container {
+      max-width: 960px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
     }
-    .hero a {
-      display: inline-block;
-      padding: 14px 32px;
-      background: #4CAF50;
-      color: #fff;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.4s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    .hero a:hover {
-      background: #43a047;
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    }
-    .catalog {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .book {
-      background: #fff;
-      border-radius: 14px;
+    .game-card {
+      background: #1e1e1e;
+      border-radius: 15px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 6px 20px rgba(255, 111, 0, 0.3);
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: 0.3s;
-      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      cursor: pointer;
     }
-    .book:hover {
-      transform: translateY(-5px);
+    .game-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(255, 111, 0, 0.7);
     }
-    .book img {
+    .game-image {
       width: 100%;
-      height: auto;
-      border-bottom: 1px solid #eee;
+      height: 220px;
+      object-fit: cover;
+      border-bottom: 2px solid #ff6f00;
     }
-    .book h3 {
-      margin: 18px 20px 10px;
-      font-size: 24px;
-      color: #333;
-      font-weight: 600;
-    }
-    .book p {
-      margin: 0 20px 15px;
-      color: #666;
-      font-size: 16px;
-      min-height: 70px;
-    }
-    .book a {
-      display: inline-block;
-      margin: 0 auto;
-      padding: 12px 24px;
-      background: #2196F3;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: 600;
-      transition: all 0.4s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    .book a:hover {
-      background: #1976D2;
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    }
-    footer {
+    .game-content {
+      padding: 1.2rem 1.8rem 2rem;
       text-align: center;
-      padding: 25px;
-      background: #222;
-      color: #ccc;
-      margin-top: 50px;
-      font-size: 15px;
+    }
+    .game-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #ff6f00;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+    }
+    .btn-download {
+      display: inline-block;
+      background: #ff6f00;
+      color: #121212;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 0.85rem 2.2rem;
+      border-radius: 30px;
+      font-size: 1rem;
+      box-shadow: 0 4px 15px rgba(255, 111, 0, 0.5);
+      transition: background 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+    .btn-download:hover {
+      background: #ffa726;
+      color: #1a1a1a;
+      box-shadow: 0 6px 25px rgba(255, 167, 38, 0.7);
+    }
+
+    /* Responsive */
+    @media (min-width: 700px) {
+      .game-card {
+        flex-direction: row;
+        height: 160px;
+      }
+      .game-image {
+        width: 220px;
+        height: 100%;
+        border-bottom: none;
+        border-right: 3px solid #ff6f00;
+      }
+      .game-content {
+        flex: 1;
+        padding: 1.5rem 2.5rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .btn-download {
+        align-self: flex-start;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Pet Care Books</h1>
-</header>
+<header>Top Mobile Games to Download</header>
 
-<section class="hero">
-  <img src="https://i.ibb.co/qMMXQHNx/file-000000004bb862438392003b1bcb7b46.png" alt="Pet Care Banner">
-  <h2>Discover the Best Pet Care Books</h2>
-  <p>Learn how to keep your beloved pets healthy and happy with our top book picks!</p>
-  <a href="#catalog">Browse Books</a>
-</section>
+<main class="container">
 
-<section id="catalog" class="catalog">
+  <section class="game-card">
+    <img src="https://i.postimg.cc/sgXRr20v/maxresdefault-1.jpg" alt="Clash Royale" class="game-image" />
+    <div class="game-content">
+      <h2 class="game-title">Clash Royale</h2>
+      <a href="https://play.google.com/store/apps/details?id=com.supercell.clashroyale" target="_blank" rel="noopener" class="btn-download">Download Now</a>
+    </div>
+  </section>
 
-  <div class="book">
-    <img src="https://i.ibb.co/4ZjKDWK1/8def6cb00f6afa40c4011407176308b36314f28ed01e48651b3f83d8c9de6bc8.jpg" alt="The Secret Life of Cats Book">
-    <h3>The Secret Life of Cats - Everything Your Cat Would Want You to Know</h3>
-    <p>Understand your cat's secret behaviors, health tips, and ways to keep your feline friend happy and stress-free.</p>
-    <a href="https://locked2.com/cl/i/pod8gl" target="_blank">Download PDF</a>
-  </div>
+  <section class="game-card">
+    <img src="https://i.postimg.cc/52cwcHtm/i-Candy-and-Animoca-Brands-Unveil-New-Web3-Game-Snaky-Cat-on-Base-1600x900-1-1536x864.jpg" alt="Snaky Cat" class="game-image" />
+    <div class="game-content">
+      <h2 class="game-title">Snaky Cat</h2>
+      <a href="https://play.google.com/store/apps/details?id=com.gpp.snakycat" target="_blank" rel="noopener" class="btn-download">Download Now</a>
+    </div>
+  </section>
 
-  <div class="book">
-    <img src="https://i.ibb.co/83m3gVp/718-WYr-ZL1-SL-AC-UF1000-1000-QL80-FMwebp.webp" alt="Dog Owner's Handbook Book">
-    <h3>Dog Owner's Handbook</h3>
-    <p>Essential dog care advice including grooming, training, nutrition, and understanding your dog's behavior.</p>
-    <a href="https://locked1.com/cl/i/2ljvwd" target="_blank">Download PDF</a>
-  </div>
+  <section class="game-card">
+    <img src="https://i.postimg.cc/BvSPs2f2/Genshin-Impact-e1597027045614-1536x810.avif" alt="Genshin Impact" class="game-image" />
+    <div class="game-content">
+      <h2 class="game-title">Genshin Impact</h2>
+      <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact" target="_blank" rel="noopener" class="btn-download">Download Now</a>
+    </div>
+  </section>
 
-</section>
+  <section class="game-card">
+    <img src="https://i.postimg.cc/j5CcXLvY/WZM-01-LAUNCH-TOUT.jpg" alt="Call of Duty: Mobile" class="game-image" />
+    <div class="game-content">
+      <h2 class="game-title">Call of Duty: Mobile</h2>
+      <a href="https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter" target="_blank" rel="noopener" class="btn-download">Download Now</a>
+    </div>
+  </section>
 
-<footer>
-  &copy; 2025 Pet Care Books Catalog. All rights reserved.
-</footer>
+</main>
 
 </body>
 </html>
